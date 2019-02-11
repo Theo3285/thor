@@ -49,4 +49,36 @@ public class ThorShould {
     public void turn_ouest(int lightX, int lightY, String position) {
         assertThat(thor.moves(lightX, lightY), is(position));
     }
+
+    @Test
+    @Parameters({
+            "4, 4, SE"
+    })
+    public void turn_southeast(int lightX, int lightY, String position) {
+        assertThat(thor.moves(lightX, lightY), is(position));
+    }
+
+    @Test
+    @Parameters({
+            "2, 4, SO"
+    })
+    public void turn_southouest(int lightX, int lightY, String position) {
+        assertThat(thor.moves(lightX, lightY), is(position));
+    }
+
+    @Test
+    @Parameters({
+            "2, 2, NO"
+    })
+    public void turn_northouest(int lightX, int lightY, String position) {
+        assertThat(thor.moves(lightX, lightY), is(position));
+    }
+
+    @Test
+    @Parameters({
+            "4, 2, NE"
+    })
+    public void turn_northeast(int lightX, int lightY, String position) {
+        assertThat(thor.moves(lightX, lightY), is(position));
+    }
 }

@@ -19,6 +19,14 @@ public class Thor {
             direction = "E";
         } else if (lightX == initialTX && lightY > initialTY) {
             direction = "S";
+        } else if (lightX > initialTX && lightY > initialTY) {
+            direction = "SE";
+        } else if (lightX < initialTX && lightY > initialTY) {
+            direction = "SO";
+        } else if (lightX < initialTX && lightY < initialTY) {
+            direction = "NO";
+        } else if (lightX > initialTX && lightY < initialTY) {
+            direction = "NE";
         }
         return direction;
     }
